@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CustomerForm.css";
+import styles from "./CustomerForm.module.scss";
 
 const CustomerForm = ({ addNewCustomer }) => {
   const [customerName, setCustomerName] = useState("");
@@ -31,10 +31,10 @@ const CustomerForm = ({ addNewCustomer }) => {
   };
 
   return (
-    <form className="customer-form" onSubmit={handleSubmit}>
+    <form className={styles.customerform} onSubmit={handleSubmit}>
       <input
         type="text"
-        className={`customer-input ${isValid ? "invalid" : ""}`}
+        className={`"styles.customerinput" ${isValid ? "styles.invalid" : ""}`}
         placeholder="new"
         onChange={nameInputChangeHandler}
         value={customerName}
