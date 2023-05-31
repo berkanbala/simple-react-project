@@ -1,5 +1,8 @@
 import { useState } from "react";
 import styles from "./CustomerForm.module.scss";
+import { Input } from "../../pages/input/input";
+// import plus from "../../images/plus.png";
+// import { Button } from "../../pages/button/button";
 
 const CustomerForm = ({ addNewCustomer }) => {
   const [customerName, setCustomerName] = useState("");
@@ -32,13 +35,21 @@ const CustomerForm = ({ addNewCustomer }) => {
 
   return (
     <form className={styles.customerform} onSubmit={handleSubmit}>
-      <input
+      {/* <input
+        type="text"
+        className={`"styles.customerinput" ${isValid ? "styles.invalid" : ""}`}
+        placeholder="new"
+        onChange={nameInputChangeHandler}
+        value={customerName}
+      /> */}
+      <Input
         type="text"
         className={`"styles.customerinput" ${isValid ? "styles.invalid" : ""}`}
         placeholder="new"
         onChange={nameInputChangeHandler}
         value={customerName}
       />
+
       <button>
         <i className="bi bi-plus-lg"></i>
       </button>
