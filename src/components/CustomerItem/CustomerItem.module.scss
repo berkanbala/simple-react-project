@@ -1,0 +1,75 @@
+.customeritem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
+  .customerinfo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .customeravatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
+
+    .customernam.customeritem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      flex-direction: row;
+
+      .customerinfo {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        .customeravatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+        }
+
+        .customername {
+          color: rgb(12, 26, 2);
+          font-weight: 500;
+          font-size: 18px;
+          padding: 10px;
+        }
+      }
+
+      .deletebutton {
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 0.4rem #a9a6a6;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:focus {
+          outline-color: lightcoral;
+        }
+      }
+    }
+    e {
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+
+  .deletebutton {
+    background-color: red;
+    padding: 8px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
