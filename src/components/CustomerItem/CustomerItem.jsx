@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./CustomerItem.module.scss";
+import styles from "./customerItem.module.scss";
 
-const CustomerItem = ({ customer, handleDelete }) => {
+export const CustomerItem = ({ customer, handleDelete }) => {
   return (
     <li className={styles.customeritem}>
       <div className={styles.customerinfo}>
@@ -21,5 +21,3 @@ const CustomerItem = ({ customer, handleDelete }) => {
     </li>
   );
 };
-
-export default CustomerItem;

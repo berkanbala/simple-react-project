@@ -1,8 +1,11 @@
+@import "../../common/assets/styles/variable.scss";
+
 .customeritem {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  flex-direction: row;
 
   .customerinfo {
     display: flex;
@@ -16,18 +19,26 @@
     }
 
     .customername {
+      color: $green2;
       font-weight: 500;
       font-size: 18px;
+      padding: 10px;
     }
   }
 
   .deletebutton {
-    background-color: red;
-    padding: 8px;
+    background-color: $white;
+    padding: 5px;
     transition: opacity 0.3s ease;
+    box-shadow: 0 0.4rem $grey;
+    cursor: pointer;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline-color: $pink;
     }
   }
 }

@@ -1,7 +1,9 @@
+@import "../../common/assets/styles/variable.scss";
+
 .customerform {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
+  align-items: center;
   column-gap: 10px;
   margin-bottom: 20px;
 
@@ -12,31 +14,71 @@
     line-height: 20px;
     padding: 0 16px;
     height: 48px;
-    background-color: #fff;
-    border: 1px solid #d6d6e7;
+    background-color: $blue2;
+    border: 1px solid $white1;
     border-radius: 3px;
-    color: rgb(35, 38, 59);
-    box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
+    color: $black1;
+    box-shadow: inset 0 1px 4px 0 $blue3;
     overflow: hidden;
     transition: all 100ms ease-in-out;
     flex: 1;
 
     &:focus {
-      border-color: #3c4fe0;
-      box-shadow: 0 1px 0 0 rgb(35 38 59 / 5%);
+      border-color: $blue4;
+      box-shadow: 0 1px 0 0 $black1;
+    }
+  }
+  input {
+    background-color: $white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 13em;
+    border-radius: 1rem;
+    color: $pink1;
+    box-shadow: 0 0.4rem $grey;
+    cursor: pointer;
+
+    &:focus {
+      outline-color: $pink;
     }
   }
 
   .invalid {
-    background-color: red !important;
+    background-color: $red !important;
 
     &::placeholder {
-      color: white !important;
+      color: $white !important;
     }
   }
+
+  button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+      -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background-color: $white;
+    border: none;
+    border-radius: 16px;
+    color: $black;
+    box-shadow: 0 8px $grey;
+    cursor: pointer;
+
+    &:focus {
+      outline-color: $pink;
+    }
+  }
+
   @media (max-width: 576px) {
     .invalid {
-      background-color: salmon !important;
+      background-color: $pink2 !important;
     }
   }
 }

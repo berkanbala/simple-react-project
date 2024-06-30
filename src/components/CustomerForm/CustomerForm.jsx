@@ -1,10 +1,8 @@
 import { useState } from "react";
-import styles from "./CustomerForm.module.scss";
-import { Input } from "../../pages/input/input";
-// import plus from "../../images/plus.png";
-// import { Button } from "../../pages/button/button";
+import { Input } from "../../common/pages/input/input";
+import styles from "./customerForm.module.scss";
 
-const CustomerForm = ({ addNewCustomer }) => {
+export const CustomerForm = ({ addNewCustomer }) => {
   const [customerName, setCustomerName] = useState("");
   const [isValid, setIsValid] = useState(false);
 
@@ -35,26 +33,29 @@ const CustomerForm = ({ addNewCustomer }) => {
 
   return (
     <form className={styles.customerform} onSubmit={handleSubmit}>
-      {/* <input
-        type="text"
-        className={`"styles.customerinput" ${isValid ? "styles.invalid" : ""}`}
-        placeholder="new"
-        onChange={nameInputChangeHandler}
-        value={customerName}
-      /> */}
       <Input
         type="text"
-        className={`"styles.customerinput" ${isValid ? "styles.invalid" : ""}`}
+        className={`${styles.customerInput} ${isValid ? styles.invalid : ""}`}
         placeholder="new"
         onChange={nameInputChangeHandler}
         value={customerName}
       />
 
       <button>
-        <i className="bi bi-plus-lg"></i>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          className="bi bi-plus-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+          />
+        </svg>
       </button>
     </form>
   );
 };
-
-export default CustomerForm;

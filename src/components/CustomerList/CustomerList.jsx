@@ -1,7 +1,7 @@
-import CustomerItem from "../CustomerItem/CustomerItem";
-import styles from "./CustomerList.module.scss";
+import { CustomerItem } from "../CustomerItem/customerItem";
+import styles from "./customerList.module.scss";
 
-function CustomerList({ customers, setCustomers }) {
+export const CustomerList = ({ customers, setCustomers }) => {
   const handleDelete = (item) => {
     setCustomers(customers.filter((customer) => customer.id !== item.id));
   };
@@ -16,5 +16,4 @@ function CustomerList({ customers, setCustomers }) {
       ))}
     </ul>
   );
-}
-export default CustomerList;
+};
